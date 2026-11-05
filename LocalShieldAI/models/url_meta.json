@@ -1,0 +1,16 @@
+{
+  "model_version": "url-20261025",
+  "trained_at": "2026-10-25T07:40:48+00:00",
+  "dataset": "OpenPhish feed + Tranco top-1M",
+  "split_sizes": {
+    "train": 619,
+    "validation": 203,
+    "test": 212
+  },
+  "sklearn_version": "1.9.1",
+  "suspicious_at": 0.417,
+  "high_risk_at": 0.9857,
+  "recall_target": 0.95,
+  "precision_target": 0.95,
+  "max_fpr": 0.15
+}

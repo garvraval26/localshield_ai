@@ -1,0 +1,15 @@
+{
+  "model_version": "sms-20261023",
+  "trained_at": "2026-10-23T17:21:30+00:00",
+  "dataset": "UCI SMS Spam Collection",
+  "split_sizes": {
+    "train": 3101,
+    "validation": 1034,
+    "test": 1034
+  },
+  "sklearn_version": "1.9.1",
+  "suspicious_at": 0.3203,
+  "high_risk_at": 0.4569,
+  "recall_target": 0.95,
+  "precision_target": 0.95
+}

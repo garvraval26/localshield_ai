@@ -1,0 +1,5 @@
+{
+  "LocalShieldAI/tests/test_portable.py::test_detectors_give_same_answer_with_json_models": true,
+  "LocalShieldAI/tests/test_portable.py::test_bad_json_kind_is_refused": true,
+  "LocalShieldAI/tests/test_portable.py::test_portable_module_does_not_need_sklearn": true
+}

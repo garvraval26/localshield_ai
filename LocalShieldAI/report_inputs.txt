@@ -1,0 +1,466 @@
+﻿=== versions ===
+Python 3.13.14
+ollama version is 0.40.11
+NAME           ID              SIZE      MODIFIED   
+llama3.2:1b    baf6a787fdff    1.3 GB    2 days ago    
+=== pip freeze ===
+altair==6.3.0
+anyio==4.15.1
+attrs==26.1.0
+certifi==2026.10.23
+charset-normalizer==3.5.2
+click==8.5.0
+cloudpickle==3.1.2
+colorama==0.4.6
+filelock==4.2.4
+h11==0.16.0
+idna==3.20
+iniconfig==2.3.1
+itsdangerous==2.2.0
+Jinja2==3.1.6
+joblib==1.6.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+MarkupSafe==3.0.4
+narwhals==2.27.1
+numpy==2.5.4
+packaging==26.3
+pandas==3.1.0
+pillow==13.0.0
+pluggy==1.7.0
+protobuf==7.36.2
+pyarrow==26.0.0
+pydeck==0.9.3
+Pygments==2.21.0
+pytest==9.1.1
+python-dateutil==3.0.0
+python-multipart==0.0.32
+referencing==0.37.0
+requests==2.34.2
+requests-file==3.0.1
+rpds-py==2026.9.1
+scikit-learn==1.9.1
+scipy==1.18.1
+six==1.17.0
+starlette==1.9.0
+streamlit==1.66.1
+threadpoolctl==3.7.0
+tldextract==5.4.0
+typing_extensions==4.16.0
+tzdata==2026.5
+urllib3==2.8.0
+uvicorn==0.54.0
+watchdog==6.0.0
+websockets==17.3
+=== pytest ===
+.......................................................                  [100%]
+55 passed in 10.59s
+=== sms_meta ===
+{
+  "model_version": "sms-20261026",
+  "trained_at": "2026-10-26T19:58:12+00:00",
+  "dataset": "UCI SMS Spam Collection + template-generated transactional messages (train only)",
+  "split_sizes": {
+    "train": 3941,
+    "train_extra": 840,
+    "validation": 1034,
+    "test": 1034
+  },
+  "sklearn_version": "1.9.1",
+  "suspicious_at": 0.2843,
+  "high_risk_at": 0.4064,
+  "recall_target": 0.95,
+  "precision_target": 0.95,
+  "max_fpr": 0.15
+}
+=== sms_metrics ===
+{
+  "at_0.5": {
+    "precision": 0.944,
+    "recall": 0.9007633587786259,
+    "f1": 0.921875,
+    "confusion_matrix": {
+      "tn": 896,
+      "fp": 7,
+      "fn": 13,
+      "tp": 118
+    }
+  },
+  "at_flag_threshold": {
+    "threshold": 0.2843,
+    "precision": 0.8513513513513513,
+    "recall": 0.9618320610687023,
+    "f1": 0.9032258064516129,
+    "confusion_matrix": {
+      "tn": 881,
+      "fp": 22,
+      "fn": 5,
+      "tp": 126
+    }
+  },
+  "at_high_risk_threshold": {
+    "threshold": 0.4064,
+    "precision": 0.937984496124031,
+    "recall": 0.9236641221374046,
+    "f1": 0.9307692307692308,
+    "confusion_matrix": {
+      "tn": 895,
+      "fp": 8,
+      "fn": 10,
+      "tp": 121
+    }
+  },
+  "test_size": 1034,
+  "test_class_balance": {
+    "ham": 903,
+    "spam": 131
+  },
+  "calibration": {
+    "ece": 0.0712,
+    "brier": 0.0191,
+    "reliability": [
+      {
+        "bin": "0.0-0.1",
+        "n": 703,
+        "mean_score": 0.052,
+        "actual_scam_rate": 0.001
+      },
+      {
+        "bin": "0.1-0.2",
+        "n": 156,
+        "mean_score": 0.139,
+        "actual_scam_rate": 0.013
+      },
+      {
+        "bin": "0.2-0.3",
+        "n": 34,
+        "mean_score": 0.239,
+        "actual_scam_rate": 0.088
+      },
+      {
+        "bin": "0.3-0.4",
+        "n": 11,
+        "mean_score": 0.343,
+        "actual_scam_rate": 0.273
+      },
+      {
+        "bin": "0.4-0.5",
+        "n": 5,
+        "mean_score": 0.43,
+        "actual_scam_rate": 0.8
+      },
+      {
+        "bin": "0.5-0.6",
+        "n": 9,
+        "mean_score": 0.551,
+        "actual_scam_rate": 0.444
+      },
+      {
+        "bin": "0.6-0.7",
+        "n": 6,
+        "mean_score": 0.642,
+        "actual_scam_rate": 0.833
+      },
+      {
+        "bin": "0.7-0.8",
+        "n": 10,
+        "mean_score": 0.742,
+        "actual_scam_rate": 0.9
+      },
+      {
+        "bin": "0.8-0.9",
+        "n": 21,
+        "mean_score": 0.862,
+        "actual_scam_rate": 1.0
+      },
+      {
+        "bin": "0.9-1.0",
+        "n": 79,
+        "mean_score": 0.947,
+        "actual_scam_rate": 1.0
+      }
+    ]
+  },
+  "train_class_balance": {
+    "ham": 3230,
+    "spam": 711
+  }
+}
+=== url_meta ===
+{
+  "model_version": "url-20261025",
+  "trained_at": "2026-10-25T07:40:48+00:00",
+  "dataset": "OpenPhish feed + Tranco top-1M",
+  "split_sizes": {
+    "train": 619,
+    "validation": 203,
+    "test": 212
+  },
+  "sklearn_version": "1.9.1",
+  "suspicious_at": 0.417,
+  "high_risk_at": 0.9857,
+  "recall_target": 0.95,
+  "precision_target": 0.95,
+  "max_fpr": 0.15
+}
+=== url_metrics ===
+{
+  "at_0.5": {
+    "precision": 0.5833333333333334,
+    "recall": 0.8484848484848485,
+    "f1": 0.691358024691358,
+    "confusion_matrix": {
+      "tn": 159,
+      "fp": 20,
+      "fn": 5,
+      "tp": 28
+    }
+  },
+  "at_flag_threshold": {
+    "threshold": 0.417,
+    "precision": 0.5555555555555556,
+    "recall": 0.9090909090909091,
+    "f1": 0.6896551724137931,
+    "confusion_matrix": {
+      "tn": 155,
+      "fp": 24,
+      "fn": 3,
+      "tp": 30
+    }
+  },
+  "at_high_risk_threshold": {
+    "threshold": 0.9857,
+    "precision": 1.0,
+    "recall": 0.3333333333333333,
+    "f1": 0.5,
+    "confusion_matrix": {
+      "tn": 179,
+      "fp": 0,
+      "fn": 22,
+      "tp": 11
+    }
+  },
+  "test_size": 212,
+  "test_class_balance": {
+    "legit": 179,
+    "phishing": 33
+  },
+  "calibration": {
+    "ece": 0.2165,
+    "brier": 0.1092,
+    "reliability": [
+      {
+        "bin": "0.1-0.2",
+        "n": 78,
+        "mean_score": 0.173,
+        "actual_scam_rate": 0.013
+      },
+      {
+        "bin": "0.2-0.3",
+        "n": 53,
+        "mean_score": 0.24,
+        "actual_scam_rate": 0.019
+      },
+      {
+        "bin": "0.3-0.4",
+        "n": 22,
+        "mean_score": 0.352,
+        "actual_scam_rate": 0.045
+      },
+      {
+        "bin": "0.4-0.5",
+        "n": 11,
+        "mean_score": 0.428,
+        "actual_scam_rate": 0.182
+      },
+      {
+        "bin": "0.5-0.6",
+        "n": 3,
+        "mean_score": 0.547,
+        "actual_scam_rate": 0.0
+      },
+      {
+        "bin": "0.6-0.7",
+        "n": 7,
+        "mean_score": 0.646,
+        "actual_scam_rate": 0.143
+      },
+      {
+        "bin": "0.7-0.8",
+        "n": 9,
+        "mean_score": 0.748,
+        "actual_scam_rate": 0.444
+      },
+      {
+        "bin": "0.8-0.9",
+        "n": 9,
+        "mean_score": 0.846,
+        "actual_scam_rate": 0.444
+      },
+      {
+        "bin": "0.9-1.0",
+        "n": 20,
+        "mean_score": 0.986,
+        "actual_scam_rate": 0.95
+      }
+    ]
+  },
+  "train_class_balance": {
+    "legit": 535,
+    "phishing": 84
+  },
+  "miss_analysis": {
+    "phishing_in_test": 33,
+    "missed_by_model": 3,
+    "missed_but_has_rule_sign": 0,
+    "missed_but_has_path_keyword": 0,
+    "note": "Hostname-only model cannot see hacked legitimate domains."
+  }
+}
+=== sms check: 6 normal messages ===
+Model sms-20261026  suspicious_at=0.2843  high_risk_at=0.4064
+
+ok    0.13 likely_safe  [legit] Your verification code is 482731. Do not share this code with anyone. Use it to complete y
+ok    0.20 likely_safe  [legit] Security alert: A new login was detected on your account. If this was you, no action is ne
+ok    0.12 likely_safe  [legit] Payment received successfully. Your transaction is complete. Thank you for using our servi
+WRONG 0.44 high_risk    [legit] Your account balance was updated following your recent transaction. Log in to your bank's 
+ok    0.16 likely_safe  [legit] Your package has arrived at the local delivery centre and is scheduled for delivery today.
+WRONG 0.33 suspicious   [legit] Your device is now connected to the college Wi-Fi network. You can access the internet nor
+
+Legit messages wrongly flagged: 2 of 6
+Scam messages missed:           0 of 0
+=== sms check: indian_sms_eval ===
+Model sms-20261026  suspicious_at=0.2843  high_risk_at=0.4064
+
+ok    0.99 high_risk    [scam] Dear customer your bank account will be blocked today. Complete KYC now at http://kyc-upda
+ok    0.92 high_risk    [scam] Your electricity connection will be disconnected tonight at 9:30 PM. Pay pending bill imme
+ok    0.92 high_risk    [scam] Congratulations! You won Rs 25,00,000 in lucky draw. Send your UPI PIN to claim the prize
+ok    0.86 high_risk    [scam] Your courier is held at the warehouse. Pay Rs 49 redelivery fee within 24 hours: http://co
+ok    0.70 high_risk    [scam] Part time job offer! Earn Rs 5000 daily from home. Just like videos. Message on WhatsApp n
+ok    0.97 high_risk    [scam] Your PAN card is suspended. Update PAN details immediately to avoid penalty http://pan-ver
+ok    0.63 high_risk    [scam] Dear user, your UPI account is deactivated. Share OTP received to reactivate within 1 hour
+ok    0.95 high_risk    [scam] Income tax refund of Rs 15,490 approved. Confirm your bank account at http://it-refund-cla
+ok    0.92 high_risk    [scam] Your SIM will be blocked in 2 hours. Call this number to complete Aadhaar verification now
+ok    0.49 high_risk    [scam] Instant loan Rs 2 lakh approved without documents. Pay processing fee Rs 999 to receive mo
+ok    0.98 high_risk    [scam] URGENT: Unusual login detected on your account. Verify now: http://secure-acc-login.click/
+ok    0.93 high_risk    [scam] You have received cashback Rs 750. Click link to claim before it expires http://cashback-r
+ok    0.99 high_risk    [scam] FREE gift card for you! Claim your reward here http://gift-prize-win.xyz/now last chance
+ok    0.91 high_risk    [scam] Your credit card reward points of Rs 9800 will expire today. Redeem now http://card-points
+ok    0.97 high_risk    [scam] Dear customer, your debit card is blocked. Update card details and CVV at http://card-unbl
+ok    0.70 high_risk    [scam] Work from home data entry job. Earn 30000 per month. Pay registration fee Rs 500 to start
+ok    0.87 high_risk    [scam] Your Aadhaar is linked to illegal activity. Contact officer immediately or face arrest. Sh
+ok    0.96 high_risk    [scam] Your account has been suspended. Click http://account-restore-help.icu to verify identity 
+ok    0.91 high_risk    [scam] Gas subsidy of Rs 1200 is pending. Verify bank account details here http://subsidy-claim-g
+ok    0.43 high_risk    [scam] Hi, I am from HR, we selected you for a job. Send Rs 1500 as security deposit to confirm j
+ok    0.90 high_risk    [scam] Parking fine pending. Pay now to avoid court notice http://e-challan-pay.xyz/p
+ok    0.96 high_risk    [scam] Your wallet KYC has expired. Wallet will be frozen today. Update now http://wallet-kyc-upd
+ok    0.97 high_risk    [scam] Lottery winner! Your mobile number won Rs 10 lakh. Call now and pay tax to release the pri
+ok    0.94 high_risk    [scam] Dear customer, new rewards available on your account. Login to redeem http://reward-login-
+ok    0.86 high_risk    [scam] Your package could not be delivered due to wrong address. Update address and pay Rs 25 at 
+ok    0.14 likely_safe  [legit] Your OTP for login is 482913. Do not share it with anyone. Valid for 10 minutes.
+ok    0.04 likely_safe  [legit] Hi, are we meeting for lunch tomorrow at 1?
+ok    0.05 likely_safe  [legit] Your order has been shipped and will arrive on Friday. Track it in the app.
+ok    0.06 likely_safe  [legit] Reminder: your dentist appointment is on Monday at 10:30 AM.
+ok    0.24 likely_safe  [legit] Rs 1,250 debited from your account ending 4321 at a grocery store on 21-10. Available bala
+ok    0.12 likely_safe  [legit] Mom: please call me when you reach home.
+ok    0.21 likely_safe  [legit] Your monthly electricity bill of Rs 842 has been generated. Due date 30 Oct. Pay through t
+ok    0.07 likely_safe  [legit] The meeting is moved to 4 PM, conference room B.
+WRONG 0.31 suspicious   [legit] Thanks for your payment of Rs 499. Your receipt has been emailed to you.
+ok    0.04 likely_safe  [legit] Happy birthday! Hope you have a great day. Party at my place on Saturday.
+ok    0.07 likely_safe  [legit] Your cab will arrive in 5 minutes. Driver: Ramesh, vehicle ending 2210.
+ok    0.20 likely_safe  [legit] Class notes for Unit 3 uploaded. Exam syllabus will be shared tomorrow.
+ok    0.04 likely_safe  [legit] Can you send me the assignment PDF? I lost my copy.
+ok    0.13 likely_safe  [legit] Your train ticket is confirmed. PNR 2456789012, coach S4, seat 23.
+ok    0.07 likely_safe  [legit] Dinner at 8 tonight? I booked the table.
+ok    0.27 likely_safe  [legit] Your prescription is ready for pickup at the pharmacy.
+ok    0.25 likely_safe  [legit] Package delivered to your front door at 3:15 PM. Have a nice day.
+ok    0.14 likely_safe  [legit] Recharge of Rs 299 successful. Validity extended till 20 Nov.
+ok    0.20 likely_safe  [legit] Please submit the lab record by Thursday, otherwise marks will be deducted.
+ok    0.20 likely_safe  [legit] Your flight departs at 06:45 from Terminal 2. Web check-in is open.
+ok    0.08 likely_safe  [legit] Bro, the match starts at 7. Come early to get seats.
+WRONG 0.34 suspicious   [legit] Salary for October has been credited to your account.
+ok    0.18 likely_safe  [legit] Your library book is due in 2 days. Please renew or return it.
+ok    0.10 likely_safe  [legit] Wifi password for the hostel is on the notice board.
+ok    0.12 likely_safe  [legit] Your internet plan renews on 5 Nov. No action is needed.
+
+Legit messages wrongly flagged: 2 of 25
+Scam messages missed:           0 of 25
+=== offline check ===
+URL likely_safe  explained_by=llama             https://www.google.com/
+URL suspicious   explained_by=llama             http://paytm-kyc-update.xyz/login
+URL high_risk    explained_by=llama             gooogle.cooom
+URL suspicious   explained_by=llama             http://192.168.1.5/login
+URL likely_safe  explained_by=llama             https://example.com/a?next=http://evil.test
+SMS high_risk    explained_by=llama             URGENT! Your account is blocked. Verify KYC now at http
+SMS high_risk    explained_by=llama             HDFC Bank: verify your account at http://hdfc-kyc-updat
+SMS likely_safe  explained_by=llama             Your verification code is 482731. Do not share this cod
+SMS likely_safe  explained_by=llama             see you at lunch tomorrow
+
+Analyses completed: 9   Failed: 0
+Outside connection attempts blocked: 0
+
+OFFLINE CHECK PASSED
+=== project files ===
+.gitignore
+app.py
+report_inputs.txt
+.streamlit\config.toml
+data\history.db
+data\eval\extra_sms.csv
+data\eval\indian_sms_eval.csv
+data\eval\legit_regression.csv
+data\raw\phishing_urls.txt
+data\raw\SMSSpamCollection
+data\raw\tranco.csv
+data\train_extra\transactional_sms.csv
+detector\common.py
+detector\domain_allowlist.py
+detector\errors.py
+detector\evaluate.py
+detector\eval_external.py
+detector\features.py
+detector\known_sites.py
+detector\lookalike.py
+detector\sms_detector.py
+detector\sms_links.py
+detector\thresholds.py
+detector\train.py
+detector\train_url.py
+detector\url_detector.py
+detector\url_features.py
+detector\__init__.py
+docs\ARM_EXECUTORCH_DEPLOYMENT_PLAN.md
+llm\llama_adapter.py
+llm\prompt_templates.py
+llm\validator.py
+llm\__init__.py
+models\brands.json
+models\sms_meta.json
+models\sms_meta_before.json
+models\sms_metrics.json
+models\sms_model.joblib
+models\sms_model_before.joblib
+models\url_meta.json
+models\url_metrics.json
+models\url_model.joblib
+scripts\build_brands.py
+scripts\check_lookalike.py
+scripts\check_sms.py
+scripts\download_data.py
+scripts\download_url_data.py
+scripts\explain_sms.py
+scripts\make_transactional_data.py
+scripts\offline_check.py
+services\analysis_service.py
+services\history.py
+services\input_router.py
+services\__init__.py
+tests\test_common.py
+tests\test_domain_rules.py
+tests\test_llm.py
+tests\test_lookalike.py
+tests\test_sms.py
+tests\test_sms_extra.py
+tests\test_sms_links.py
+tests\test_url.py
+tests\__init__.py
